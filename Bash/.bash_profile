@@ -1,2 +1,4 @@
 #!/bin/bash
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+for f in ~/.config/bash/profile/*; do
+    [[ -f $f ]] && . "$f"
+done
