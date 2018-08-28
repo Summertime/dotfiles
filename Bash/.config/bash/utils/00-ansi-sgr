@@ -27,7 +27,7 @@ SGR_FG_GREEN='\e[32m'
 SGR_FG_YELLOW='\e[33m'
 SGR_FG_BLUE='\e[34m'
 SGR_FG_MAGENTA='\e[35m'
-SGR_FG_CYAN='\e[32m'
+SGR_FG_CYAN='\e[36m'
 SGR_FG_WHITE='\e[37m'
 SGR_FG_OFF='\e[39m'
 
