@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. "${BASH_SOURCE%/*/*}/utils/ansi-sgr"
+
+function PS_username {
+    echo $PS_BNP$SGR_BOLD$SGR_FG_RED$PS_ENP'\u'$PS_BNP$SGR_RESET_ALL$PS_ENP
+}
+
+function PS_current_dir {
+    echo $PS_BNP$SGR_BOLD$SGR_FG_GREEN$PS_ENP'\w'$PS_BNP$SGR_RESET_ALL$PS_ENP
+}

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+. "${BASH_SOURCE%/*/*}/utils/ansi-sgr"
+
+function PS_git {
+    local response=''
+    local ref=$(git symbolic-ref --quiet HEAD 2> /dev/null)
+    if [[ -n $ref ]]; then
+        response=$response${ref#refs/heads/}
+        STATUS="$(command git status --porcelain 2> /dev/null | tail -n1)"
+        if [[ -n $STATUS ]]; then
+            response=$PS_BNP$SGR_FG_RED$PS_ENP$response'*'$PS_BNP$SGR_FG_OFF$PS_ENP
+        else
+            response=$PS_BNP$SGR_FG_BLUE$PS_ENP$response$PS_BNP$SGR_FG_OFF$PS_ENP
+        fi
+    fi
+    echo "$response"
+}

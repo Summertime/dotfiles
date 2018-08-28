@@ -1,0 +1,17 @@
+#!/bin/bash
+
+. "${BASH_SOURCE%/*/*}/utils/ansi-sgr"
+
+export PS_BNP='\['
+export PS_ENP='\]'
+
+function PS_COMMAND {
+    PS1=$PS_BNP$SGR_RESET_ALL$PS_ENP
+    for prompt in ${PROMPTS[@]}; {
+        PS1=$PS1$(PS_$prompt)' '
+    }
+    PS1=${PS1// +( )/ }
+    PS1=${PS1##+( )}
+}
+
+PROMPT_COMMAND=PS_COMMAND

@@ -1,0 +1,3 @@
+#!/bin/bash
+PROMPTS=(current_dir git)
+export PROMPT_DIRTRIM=3
