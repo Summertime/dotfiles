@@ -65,5 +65,5 @@ PS2="$(crush "$PS2")"
 export PROMPT_DIRTRIM=3
 
 echo "${PS1@A}"
-echo "${PS2@A}"
+# echo "${PS2@A}"
 echo "${PROMPT_DIRTRIM@A}"
