@@ -1,0 +1,23 @@
+#!/bin/bash
+alias ls="ls\
+ --almost-all\
+ --classify\
+ --color=auto\
+ --format=long\
+ --group-directories-first\
+ --human-readable\
+ --hyperlink=auto\
+ --sort=version\
+"
+
+alias grep="grep\
+ --color=auto\
+"
+
+alias egrep="egrep\
+ --color=auto\
+"
+
+alias fgrep="fgrep\
+ --color=auto\
+"
