@@ -1,5 +1,7 @@
 #!/bin/bash
-[[ -f /etc/bashrc ]] && . /etc/bashrc
+if [[ -f /etc/bashrc ]]; then
+    . /etc/bashrc
+fi
 
 for f in ~/.config/bash/rc/*; do
     if [[ -f $f ]]; then
