@@ -1,48 +1,9 @@
 #!/bin/bash
 
-RESET_ALL='\e[0m'
+. "${BASH_SOURCE%/*/*}/utils/00-ansi-sgr"
 
-BOLD='\e[1m'
-FAINT='\e[2m'
-ITALIC='\e[3m'
-UNDERLINE='\e[4m'
-SLOW_BLINK='\e[5m'
-FAST_BLINK='\e[6m'
-REVERSE='\e[7m'
-CONCEAL='\e[8m'
-STRIKEOUT='\e[9m'
-
-BOLD_OFF='\e[21m'
-FAINT_OFF='\e[22m'
-ITALIC_OFF='\e[23m'
-UNDERLINE_OFF='\e[24m'
-BLINK_OFF='\e[25m'
-REVERSE_OFF='\e[27m'
-CONCEAL_OFF='\e[28m'
-STRIKEOUT_OFF='\e[29m'
-
-FG_BLACK='\e[30m'
-FG_RED='\e[31m'
-FG_GREEN='\e[32m'
-FG_YELLOW='\e[33m'
-FG_BLUE='\e[34m'
-FG_MAGENTA='\e[35m'
-FG_CYAN='\e[36m'
-FG_WHITE='\e[37m'
-FG_OFF='\e[39m'
-
-BG_BLACK='\e[40m'
-BG_RED='\e[41m'
-BG_GREEN='\e[42m'
-BG_YELLOW='\e[43m'
-BG_BLUE='\e[44m'
-BG_MAGENTA='\e[45m'
-BG_CYAN='\e[46m'
-BG_WHITE='\e[47m'
-BG_OFF='\e[49m'
-
-BC='\['
-EC='\]'
+PS_BNP='\['
+PS_ENP='\]'
 
 function crush {
     : "$1"
@@ -52,13 +13,13 @@ function crush {
 }
 
 P=''
-P=$P$BC$FG_GREEN$EC'\u'$BC$FG_OFF$EC
+P=$P$PS_BNP$SGR_FG_GREEN$PS_ENP'\u'$PS_BNP$SGR_FG_OFF$PS_ENP
 P=$P' '
-P=$P$BC$FG_CYAN$EC'\w'$BC$FG_OFF$EC
+P=$P$PS_BNP$SGR_FG_CYAN$PS_ENP'\w'$PS_BNP$SGR_FG_OFF$PS_ENP
 P=$P' '
 
-export PS1=$BC$RESET_ALL$BOLD$EC$P$BC$RESET_ALL$EC
-export PS2=$BC$RESET_ALL$CONCEAL$EC$P$BC$RESET_ALL$EC
+export PS1=$PS_BNP$SGR_RESET_ALL$SGR_BOLD$PS_ENP$P$PS_BNP$SGR_RESET_ALL$PS_ENP
+export PS2=$PS_BNP$SGR_RESET_ALL$SGR_CONCEAL$PS_ENP$P$PS_BNP$SGR_RESET_ALL$PS_ENP
 PS1="$(crush "$PS1")"
 PS2="$(crush "$PS2")"
 
