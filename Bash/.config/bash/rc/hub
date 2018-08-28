@@ -1,4 +1,4 @@
 #!/bin/bash
 if command -v hub > /dev/null; then
-    echo 'eval "$(hub alias -s)"'
+    eval "$(hub alias -s)"
 fi
