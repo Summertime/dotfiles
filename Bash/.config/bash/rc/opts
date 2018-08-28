@@ -1,0 +1,8 @@
+#!/bin/bash
+echo 'shopt -s autocd'
+echo 'shopt -s cdspell'
+echo 'shopt -s cmdhist'
+echo 'shopt -s extglob'
+echo 'shopt -s failglob'
+echo 'shopt -s globstar'
+echo 'set -u'
