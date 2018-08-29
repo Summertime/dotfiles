@@ -1,0 +1,12 @@
+[pretty]
+
+someline = tformat:\
+%Cred%h%Creset \
+%Cblue%>(14,trunc)%cd%Creset \
+%<|(80,trunc)%s%+b
+
+authors = tformat:\
+%Cred%h%Creset \
+%Cgreen%<(10,trunc)%an%Creset \
+%Cblue%>(14,trunc)%cd%Creset \
+%<|(80,trunc)%s%+b

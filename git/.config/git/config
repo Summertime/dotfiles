@@ -1,0 +1,7 @@
+[include]
+	path = ./config.d/user
+	path = ./config.d/pretty
+	path = ./config.d/format
+	path = ./config.d/log
+	path = ./config.d/status
+	path = ./config.d/alias
