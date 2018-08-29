@@ -1,7 +1,30 @@
+[user]
+	name = Summertime
+	email = Summertime@users.noreply.github.com
+
+[alias]
+    graph = log --graph
+
+[format]
+    pretty = oneline
+
+[status]
+    short = true
+
+[log]
+    abbrevCommit = true
+    date = relative
+
+[pretty]
+someline = tformat:\
+%Cred%h%Creset \
+%Cblue%>(14,trunc)%cd%Creset \
+%<|(80,trunc)%s%+b
+authors = tformat:\
+%Cred%h%Creset \
+%Cgreen%<(10,trunc)%an%Creset \
+%Cblue%>(14,trunc)%cd%Creset \
+%<|(80,trunc)%s%+b
+
 [include]
-	path = ./config.d/user
-	path = ./config.d/pretty
-	path = ./config.d/format
-	path = ./config.d/log
-	path = ./config.d/status
-	path = ./config.d/alias
+	path = ./config.local
