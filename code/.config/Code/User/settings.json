@@ -36,6 +36,8 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "python.autoComplete.addBrackets": true,
+    "python.pythonPath": "python3",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "update.channel": "none",
