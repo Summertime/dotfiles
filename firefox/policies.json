@@ -6,7 +6,10 @@
     "DisablePocket": true,
     "DisableTelemetry": true,
     "Extensions": {
-      "Install": ["https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/"]
+      "Install": [
+        "https://addons.mozilla.org/firefox/downloads/latest/https-everywhere/",
+        "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/"
+      ]
     },
     "NoDefaultBookmarks": true,
     "OfferToSaveLogins": true,
