@@ -12,8 +12,8 @@
       ]
     },
     "NoDefaultBookmarks": true,
-    "OfferToSaveLogins": true,
+    "OfferToSaveLogins": false,
     "OverrideFirstRunPage": "",
-    "OverridePostUpdatePage": "http://example.org"
+    "OverridePostUpdatePage": ""
   }
 }
