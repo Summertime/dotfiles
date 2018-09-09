@@ -1,0 +1,16 @@
+{
+  "policies": {
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxAccounts": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableTelemetry": true,
+    "Extensions": {
+      "Install": ["https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/"]
+    },
+    "NoDefaultBookmarks": true,
+    "OfferToSaveLogins": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "http://example.org"
+  }
+}
